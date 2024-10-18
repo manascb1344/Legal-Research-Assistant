@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 
 function ImageAnalysis() {
  const [output, setOutput] = useState("");
- const API_KEY = "AIzaSyAk1QWMnpwBQ-TljMMXaR6oKLpzak67hKQ";
+ const API_KEY = "AIzaSyA2auggOiXXslm5O8C3yx-vXJOEUC2zUmE";
 
  async function analyzeImage(event) {
    const file = event.target.files[0];
@@ -16,7 +16,7 @@ function ImageAnalysis() {
    try {
      const base64Image = await convertImageToBase64(file);
      const response = await axios.post(
-       `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro-vision-latest:generateContent?key=AIzaSyAk1QWMnpwBQ-TljMMXaR6oKLpzak67hKQ`,
+       `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-002:generateContent?key=AIzaSyA2auggOiXXslm5O8C3yx-vXJOEUC2zUmE`,
        {
          contents: [
            {

@@ -7,7 +7,7 @@ function CompareAgg() {
  const [image1, setImage1] = useState(null);
  const [image2, setImage2] = useState(null);
 
- const API_KEY = "AIzaSyAk1QWMnpwBQ-TljMMXaR6oKLpzak67hKQ";
+ const API_KEY = "AIzaSyA2auggOiXXslm5O8C3yx-vXJOEUC2zUmE";
 
  async function analyzeImages() {
    if (!image1 || !image2) {
@@ -19,7 +19,7 @@ function CompareAgg() {
      const base64Image1 = await convertImageToBase64(image1);
      const base64Image2 = await convertImageToBase64(image2);
      const response = await axios.post(
-       `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro-vision-latest:generateContent?key=${API_KEY}`,
+       `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-002:generateContent?key=${API_KEY}`,
        {
          contents: [
            {
